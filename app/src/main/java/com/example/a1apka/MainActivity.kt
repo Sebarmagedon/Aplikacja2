@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
+import android.widget.TextView
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -34,6 +35,21 @@ class MainActivity : AppCompatActivity() {
                 findViewById<ImageView>(R.id.imageView).setImageResource(R.drawable.merc)
                 x = 2
             }
+        }
+        val silniaRun=findViewById<Button>(R.id.button3)
+        val silnaInput=findViewById<ImageView>(R.id.tekst)
+        silniaRun.setOnClickListener{
+            val inputInt=silniaInput.tekst.toString().toInt()
+            val liczba2=1
+            if(inputInt==0||inputInt==1){
+                liczba2=1
+            }
+            else{
+                for(i in 2 ..inputInt)
+                    liczba2*=1
+            }
+            val tekst=liczba2.tostring()
+            findViewById<TextView>(R.id.tekst).text=(text)
         }
 
     }
